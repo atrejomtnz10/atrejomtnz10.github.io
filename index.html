@@ -14,6 +14,7 @@
 <style>
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
+html { color-scheme: dark; background: #0f131b; }
 body { margin: 0; }
 img, video { max-width: 100%; }
 .gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); min-height: 100vh; }
@@ -24,22 +25,12 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
 /* ============ C. PROFILE (modern) ============
-   Layout: a sticky profile card (photo, video intro, contact) on the left; story and timeline scroll on the right. */
+   Layout: a profile card (photo, video intro, contact) on the left; story and timeline scroll on the right. */
 .t-profile {
-  --p-bg: #eef1f6; --p-card: #ffffff; --p-ink: #141a26; --p-muted: #5a6475; --p-line: #dce1ea; --p-accent: #3c54d9; --p-soft: #e3e8fb;
+  --p-bg: #0f131b; --p-card: #171c27; --p-ink: #e6eaf2; --p-muted: #97a1b3; --p-line: #262d3b; --p-accent: #8c9dff; --p-soft: #1f2640;
   --p-display: "Bricolage Grotesque", system-ui, sans-serif; --p-body: "Manrope", system-ui, sans-serif;
   background: var(--p-bg); color: var(--p-ink); font-family: var(--p-body); font-size: 16px; line-height: 1.6;
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .t-profile {
-  --p-bg: #0f131b; --p-card: #171c27; --p-ink: #e6eaf2; --p-muted: #97a1b3; --p-line: #262d3b; --p-accent: #8c9dff; --p-soft: #1f2640; } }
-:root[data-theme="dark"] .t-profile { --p-bg: #0f131b; --p-card: #171c27; --p-ink: #e6eaf2; --p-muted: #97a1b3; --p-line: #262d3b; --p-accent: #8c9dff; --p-soft: #1f2640; }
-.t-profile.acc-green { --p-bg: #eef3f0; --p-line: #d9e3dc; --p-accent: #1f7a52; --p-soft: #e0efe6; --p-ink: #142019; --p-muted: #56665c; }
-.t-profile.acc-navy { --p-bg: #eef1f5; --p-line: #d8dee8; --p-accent: #1f3b6f; --p-soft: #e1e7f1; --p-ink: #121a29; --p-muted: #566175; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .t-profile.acc-green { --p-bg: #0e1512; --p-card: #151e1a; --p-line: #24302a; --p-accent: #6fcf9f; --p-soft: #1a2a22; --p-ink: #e4ece7; --p-muted: #95a59b; }
-  :root:not([data-theme="light"]) .t-profile.acc-navy { --p-bg: #0e131c; --p-card: #161c28; --p-line: #252e3e; --p-accent: #93b2ea; --p-soft: #1c2638; --p-ink: #e5eaf2; --p-muted: #97a2b5; } }
-:root[data-theme="dark"] .t-profile.acc-green { --p-bg: #0e1512; --p-card: #151e1a; --p-line: #24302a; --p-accent: #6fcf9f; --p-soft: #1a2a22; --p-ink: #e4ece7; --p-muted: #95a59b; }
-:root[data-theme="dark"] .t-profile.acc-navy { --p-bg: #0e131c; --p-card: #161c28; --p-line: #252e3e; --p-accent: #93b2ea; --p-soft: #1c2638; --p-ink: #e5eaf2; --p-muted: #97a2b5; }
 .t-profile .wrap { max-width: 1100px; margin: 0 auto; padding-block: 40px 72px; display: grid; grid-template-columns: 340px 1fr; gap: 28px; align-items: start; }
 .t-profile aside { background: var(--p-card); border: 1px solid var(--p-line); border-radius: 16px; padding: 20px; display: grid; gap: 16px; min-width: 0; }
 .t-profile .avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--p-soft); color: var(--p-accent); display: grid; place-items: center; font: 800 30px var(--p-display); }
