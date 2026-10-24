@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allen Martinez</title>
+<meta name="description" content="Allen Martinez, Business Operations Analyst at Southern California Edison. Budgets, forecasting and fuel pricing analysis.">
+<meta property="og:title" content="Allen Martinez">
+<meta property="og:description" content="Business Operations Analyst at Southern California Edison. Budgets, forecasting and fuel pricing analysis.">
+<meta property="og:image" content="intro-poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Archivo:wght@400;600;800;900&family=Archivo+Narrow:wght@500;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img, video { max-width: 100%; }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); min-height: 100vh; }
+h1, h2, h3 { text-wrap: balance; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.t-profile a.mail { text-decoration: none; }
+.t-profile a.mail:hover { color: var(--p-accent); }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* ============ C. PROFILE (modern) ============
+   Layout: a sticky profile card (photo, video intro, contact) on the left; story and timeline scroll on the right. */
+.t-profile {
+  --p-bg: #eef1f6; --p-card: #ffffff; --p-ink: #141a26; --p-muted: #5a6475; --p-line: #dce1ea; --p-accent: #3c54d9; --p-soft: #e3e8fb;
+  --p-display: "Bricolage Grotesque", system-ui, sans-serif; --p-body: "Manrope", system-ui, sans-serif;
+  background: var(--p-bg); color: var(--p-ink); font-family: var(--p-body); font-size: 16px; line-height: 1.6;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .t-profile {
+  --p-bg: #0f131b; --p-card: #171c27; --p-ink: #e6eaf2; --p-muted: #97a1b3; --p-line: #262d3b; --p-accent: #8c9dff; --p-soft: #1f2640; } }
+:root[data-theme="dark"] .t-profile { --p-bg: #0f131b; --p-card: #171c27; --p-ink: #e6eaf2; --p-muted: #97a1b3; --p-line: #262d3b; --p-accent: #8c9dff; --p-soft: #1f2640; }
+.t-profile.acc-green { --p-bg: #eef3f0; --p-line: #d9e3dc; --p-accent: #1f7a52; --p-soft: #e0efe6; --p-ink: #142019; --p-muted: #56665c; }
+.t-profile.acc-navy { --p-bg: #eef1f5; --p-line: #d8dee8; --p-accent: #1f3b6f; --p-soft: #e1e7f1; --p-ink: #121a29; --p-muted: #566175; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .t-profile.acc-green { --p-bg: #0e1512; --p-card: #151e1a; --p-line: #24302a; --p-accent: #6fcf9f; --p-soft: #1a2a22; --p-ink: #e4ece7; --p-muted: #95a59b; }
+  :root:not([data-theme="light"]) .t-profile.acc-navy { --p-bg: #0e131c; --p-card: #161c28; --p-line: #252e3e; --p-accent: #93b2ea; --p-soft: #1c2638; --p-ink: #e5eaf2; --p-muted: #97a2b5; } }
+:root[data-theme="dark"] .t-profile.acc-green { --p-bg: #0e1512; --p-card: #151e1a; --p-line: #24302a; --p-accent: #6fcf9f; --p-soft: #1a2a22; --p-ink: #e4ece7; --p-muted: #95a59b; }
+:root[data-theme="dark"] .t-profile.acc-navy { --p-bg: #0e131c; --p-card: #161c28; --p-line: #252e3e; --p-accent: #93b2ea; --p-soft: #1c2638; --p-ink: #e5eaf2; --p-muted: #97a2b5; }
+.t-profile .wrap { max-width: 1100px; margin: 0 auto; padding-block: 40px 72px; display: grid; grid-template-columns: 340px 1fr; gap: 28px; align-items: start; }
+.t-profile aside { background: var(--p-card); border: 1px solid var(--p-line); border-radius: 16px; padding: 20px; display: grid; gap: 16px; min-width: 0; }
+.t-profile .avatar { width: 84px; height: 84px; border-radius: 50%; background: var(--p-soft); color: var(--p-accent); display: grid; place-items: center; font: 800 30px var(--p-display); }
+.t-profile aside h1 { font: 800 30px/1.05 var(--p-display); margin: 0; letter-spacing: -.02em; }
+.t-profile .title { color: var(--p-muted); margin: 4px 0 0; font-size: 15px; }
+.t-profile .intro-video { margin: 0; display: grid; gap: 6px; justify-items: center; }
+.t-profile .intro-video video { display: block; width: 100%; max-width: 240px; aspect-ratio: 9 / 16; border-radius: 12px; background: var(--p-ink); object-fit: cover; }
+.t-profile .intro-video figcaption { display: grid; justify-items: center; gap: 4px; font: 800 17px var(--p-display); color: var(--p-ink); text-align: center; }
+.t-profile .intro-video .arrow { width: 20px; height: 28px; color: var(--p-accent); animation: nudge 1.6s ease-in-out infinite; }
+@keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(4px); } }
+.t-profile .contact { display: grid; gap: 8px; }
+.t-profile .btn { display: block; text-align: center; background: var(--p-accent); color: var(--p-card); font-weight: 700; padding: 11px; border-radius: 10px; text-decoration: none; }
+.t-profile .mail { font-size: 14px; color: var(--p-muted); text-align: center; user-select: all; overflow-wrap: anywhere; }
+.t-profile main { display: grid; gap: 20px; min-width: 0; }
+.t-profile section { background: var(--p-card); border: 1px solid var(--p-line); border-radius: 16px; padding: 28px; }
+.t-profile h2 { font: 700 13px var(--p-body); letter-spacing: .08em; text-transform: uppercase; color: var(--p-accent); margin: 0 0 14px; }
+.t-profile .intro p { margin: 0 0 12px; max-width: 62ch; }
+.t-profile .intro .big { font: 700 clamp(24px, 3.2vw, 32px)/1.2 var(--p-display); letter-spacing: -.015em; margin-bottom: 16px; }
+.t-profile .timeline { display: grid; gap: 28px; position: relative; padding-left: 26px; }
+.t-profile .timeline::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: var(--p-line); }
+.t-profile .item { position: relative; display: grid; gap: 4px; }
+.t-profile .item::before { content: ""; position: absolute; left: -26px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--p-card); border: 3px solid var(--p-accent); box-sizing: border-box; }
+.t-profile .item .when { font-size: 13px; font-weight: 600; color: var(--p-muted); font-variant-numeric: tabular-nums; }
+.t-profile .item h3 { margin: 0; font: 700 20px/1.2 var(--p-display); }
+.t-profile .item .org { color: var(--p-accent); font-weight: 600; font-size: 15px; }
+.t-profile .item ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 6px; color: var(--p-ink); }
+.t-profile .two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.t-profile .two section { min-width: 0; }
+.t-profile .skills { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.t-profile .skills li { background: var(--p-soft); color: var(--p-ink); padding: 6px 12px; border-radius: 999px; font-size: 14px; font-weight: 500; }
+.t-profile .edu { display: grid; gap: 14px; }
+.t-profile .edu div { display: grid; }
+.t-profile .edu span { color: var(--p-muted); font-size: 14px; }
+.t-profile .side-edu { border-top: 1px solid var(--p-line); padding-top: 16px; }
+.t-profile footer { grid-column: 1 / -1; text-align: center; color: var(--p-muted); font-size: 13px; }
+@media (max-width: 860px) {
+  .t-profile .wrap { grid-template-columns: 1fr; padding-block: 24px 56px; }
+  .t-profile aside { position: static; }
+  .t-profile .two { grid-template-columns: 1fr; }
+  .t-profile section { padding: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="t-profile gutter">
+  <div class="wrap">
+    <aside>
+      <div class="avatar" aria-hidden="true">AM</div>
+      <div>
+        <h1>Allen Martinez</h1>
+        <p class="title">Business Operations Analyst at Southern California Edison</p>
+      </div>
+      <figure class="intro-video">
+        <figcaption>Watch my 30-second intro<svg class="arrow" viewBox="0 0 24 32" aria-hidden="true"><path d="M12 2 V27 M4 19 L12 28 L20 19" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></figcaption>
+        <video src="intro.mp4" poster="intro-poster.jpg" controls playsinline preload="metadata" aria-label="Video introduction of Allen"></video>
+      </figure>
+      <div class="contact">
+        <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Download résumé</a>
+        <a class="mail" href="mailto:allen.martinez1010@gmail.com">allen.martinez1010@gmail.com</a>
+      </div>
+      <div class="side-edu">
+        <h2>Education</h2>
+        <div class="edu">
+          <div><b>Cal Poly Pomona</b><span>B.S. Accounting · 2014–2018</span></div>
+          <div><b>Chaffey College</b><span>A.S. Business and Technology · 2011–2014</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <section class="intro">
+        <h2>Hi, I'm Allen</h2>
+        <p>I am a results-driven professional with experience in fuels pricing and business analysis.</p>
+        <p>I focus on collaborating across teams to improve operational efficiency, maintain and expand strong business relationships and support the continual growth of business operations.</p>
+        <p>Since 2022 I've been at Southern California Edison, managing and forecasting budgets for three business units, automating reporting with SAS and Power BI, and coordinating with engineering to get stalled projects moving.</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="item">
+            <span class="when">Oct 2022 – Present</span>
+            <h3>Business Operations Analyst</h3>
+            <span class="org">Southern California Edison</span>
+            <ul>
+              <li>Manage, document and present ~$2M in expense budgets for three business units monthly.</li>
+              <li>Forecast future fiscal years with Principal Managers.</li>
+              <li>Moved reporting from manual Primavera pulls to automated SAS and Power BI.</li>
+              <li>Coordinated Substation Capacity Analyses with Protection Engineering.</li>
+              <li>Edited SQL logic to standardize reporting.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <span class="when">May 2019 – Oct 2022</span>
+            <h3>Fuel Pricing Analyst</h3>
+            <span class="org">Circle K</span>
+            <ul>
+              <li>Optimized fuel pricing to increase CPG using competitive, supply and macro trends.</li>
+              <li>Outperformed EIA gallon-sales estimates by 2%.</li>
+              <li>Supported expansion into Oregon and Washington.</li>
+              <li>Set up Kalibrate/PDI to launch the first-ever Premium Thursdays.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+          <h2>Skills</h2>
+          <ul class="skills">
+            <li>Forecasting</li><li>Variance analysis</li><li>Cost analysis</li><li>Excel modeling</li><li>SQL</li><li>Power BI</li><li>SAS</li><li>Process optimization</li><li>Applied AI tools</li>
+          </ul>
+      </section>
+    </main>
+    <footer>© 2026 Allen Martinez</footer>
+  </div>
+</div>
+
+</body>
+</html>
